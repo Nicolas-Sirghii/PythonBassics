@@ -245,30 +245,30 @@ print("Кол-во лет для достижения порога:", count)
 нажмите кнопку ниже, чтобы получить подсказку о том, что такое алгоритм бинарного поиска и как применить
  его к данной задаче.
 
-"""
 
+
+
+ rangeStart = int(input("Enter the number the range begins from: "))
+rangeStop = int(input("Enter the number the range ends with: "))
 number = int(input("Enter your number: "))
 
-diapasone = 1000
-cont = 10
-prev = 500
-after = 0
-flag = False
 
-while cont > 0:
-    cont -= 1 
+midle = (rangeStart + rangeStop) // 2
 
-    print("............",diapasone)
-
-    if number < diapasone:
-        prev = diapasone
-        diapasone = diapasone - 500
-        after = diapasone
-          
+while number != midle:
+    if number > midle:
+        rangeStart = midle
+        midle = (rangeStart + rangeStop) // 2
     else:
-       diapasone = diapasone + ((prev - diapasone) // 2) 
-       
+        rangeStop = midle
+        midle = (rangeStart + rangeStop) // 2
+    print(midle)       
       
+
+"""
+
+
+
     
                 
             

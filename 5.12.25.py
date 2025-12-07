@@ -72,9 +72,18 @@ for number in range(1,n + 1):
         print(number, " ** =", number ** 3) 
 
 #..............................................................
+n = int(input('Enter the N: '))
+
+for number in range(1, n // 2 + 1):
+    t = number * 2
+    print(t, "** 3 =", t ** 3)
 
 """
 
+
+
+
+  
 
     
 

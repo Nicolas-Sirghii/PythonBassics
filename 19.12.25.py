@@ -60,8 +60,16 @@ for num in range(number + 1):
 
 
 
-Здесь и далее — скриншоты Replit / Replit, Inc.
+height = int(input("Введите количество уровней: "))
+new_num = 1
 
+for row in range(height): 
+    print("   " * (height - row - 1), end = '')
+    for col in range(row + 1):
+        print(new_num, end = '    ')
+        new_num += 2
+    print() 
+#.....................................................................................
 
 
 Задача 2. Яма
@@ -76,24 +84,15 @@ for num in range(number + 1):
 Нажмите кнопку ниже, чтобы посмотреть видеоразбор этих заданий.
 
 """
-
-height = int(input("Введите количество уровней: "))
-width = (height + (height -1))
-left = width // 2 
-right = width // 2 
-
-digits = -1
-
-for rows in range(height):
-    left -= 1
-    right += 1
-    for column in range(width):
-        if column <= left or column >= right:
-            print(" ", end = "\t")
-        else:
-            digits += 2
-            print(digits , end = "\t")    
-    print()    
-
+ledder = int(input("Enter the number: "))
+ 
+for num in range(ledder):
+    for x in range(ledder,ledder - num - 1, -1):
+        print(x, end = '')
+    point = (ledder - num - 1) * 2
+    print("." * point, end = "") 
+    for y in range(ledder - num, ledder + 1): 
+        print(y, end = '')
+    print()
 
     
